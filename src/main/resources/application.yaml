@@ -3,17 +3,14 @@ spring:
     name: yu-ai-agent
   profiles:
     active: local
-  datasource:
-      url: jdbc:postgresql://rm-cn-rp64dcaoj0004e.rwlb.rds.aliyuncs.com:5432/yu_ai_agent
-      username: my_user
-      password: Zhangjh20040610
   ai:
     vectorstore:
       pgvector:
-       index-type: HNSW
-       distance-type: COSINE_DISTANCE
-       dimensions: 1536
-       max-document-batch-size: 10000 # Optional: Maximum number of documents per batch
+        index-type: HNSW
+        distance-type: COSINE_DISTANCE
+        dimension: 1536
+        max-document-batch-size: 10000 # Optional: Maximum number of documents per batch
+        initialize-schema: true
 server:
   port: 8123
   servlet:

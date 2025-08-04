@@ -1,4 +1,4 @@
 package com.yupi.yuaiagent.rag;
 
-public class PgVectorStoreConfig {
+public class QueryRewriter {
 }
